@@ -1,0 +1,462 @@
+:root {
+  /* Font Families */
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-fasthand: "Fasthand", sans-serif;
+  --font-felipa: "Felipa", serif;
+
+  /* Font Weights */
+  --font-weight-light: 200;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Font Sizes */
+  --font-size-xxl: 70px;
+  --font-size-xl: 60px;
+  --font-size-lg: 30px;
+  --font-size-md: 25px;
+  --font-size-sm: 2rem;
+  --font-size-xs-sm: 1.5rem;
+
+  /* Spacing & Padding */
+  --padding-lg: 30px;
+  --padding-md: 20px;
+  --padding-sm: 10px;
+}
+
+.yoga-section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* Header Styles */
+header {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 10px;
+  font-family: "DM Sans";
+}
+
+header h1 {
+  color: #000;
+  font-size: 5rem;
+  margin-bottom: -50px;
+}
+
+header h1 span.highlight {
+  color: #ffdc2e;
+}
+.yoga-section {
+  overflow: hidden;
+}
+
+/* header p {
+  font-family: "Fasthand",cursive;
+  color: #000;
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 10px;
+  margin-left: 160px;
+} */
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.yoga-section__title {
+  display: flex;
+  gap: 1rem;
+  font-size: 5rem;
+  color: black;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-dm-sans);
+  padding: 0 1rem;
+}
+
+.yoga-section__subtitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-light);
+  font-family: var(--font-fasthand);
+  position: absolute;
+  bottom: -3px;
+  width: 200px;
+}
+
+.yoga-section__title_2 {
+  position: relative;
+}
+
+.highlighted-text {
+  color: var(--primary-yellow);
+}
+
+.yoga-container {
+  width: fit-content;
+  position: relative;
+  height: 85vh;
+}
+
+.yoga {
+  height: inherit;
+}
+
+.cloud,
+.curve-text,
+.ellipse {
+  position: absolute;
+}
+
+/* .image-container img {
+  position: absolute;
+} */
+
+.ellipse {
+  bottom: 95px;
+  left: 0;
+  height: 40vh;
+  width: 100%;
+  object-fit: contain;
+  z-index: -3;
+  animation: pulse 12s infinite;
+  /* border: 2px solid red; */
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+.right-cloud {
+  height: 30vh;
+  bottom: 0;
+  right: -35%;
+  z-index: -3;
+  opacity: 1; /* Fully visible */
+  transform: translate(200px, 0px); /* Original position */
+  transition: opacity 2s ease, transform 2s ease; /* Smooth transition */
+}
+
+.animate {
+  opacity: 1; /* Fully visible */
+  transform: translate(0, 0); /* Original position */
+}
+
+.left-cloud {
+  height: 30vh;
+  bottom: 0;
+  left: -40%;
+  z-index: -3;
+  transition: opacity 2s ease, transform 2s ease; /* Smooth transition */
+}
+
+.left-cloud {
+  opacity: 1; /* Fully visible */
+  transform: translate(-200px, 0px); /* Original position */
+}
+.right-curve {
+  bottom: 0;
+  right: -30%;
+}
+
+.left-curve {
+  bottom: 0;
+  left: -35%;
+  transform: rotate(-20deg);
+}
+
+.para1 {
+  font-family: "Fasthand";
+  position: absolute;
+  top: 6rem;
+  left: -150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.para1 p {
+  font-size: 2rem;
+}
+
+/* .para1 img {
+  width: 25%;
+} */
+
+.para2 {
+  font-family: "Fasthand";
+  position: absolute;
+  top: 0rem;
+  right: -67%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.para2 p {
+  font-family: "Fasthand", cursive;
+
+  font-size: 2rem;
+}
+
+.para2 img {
+  width: 15%;
+  transform: rotate(-100deg);
+  /* position: absolute; */
+}
+
+.para2 .tagline {
+  text-align: center;
+}
+
+.tagline span {
+  font-family: "Fasthand", cursive;
+
+  font-size: 2.5rem;
+}
+
+.tagline span.how {
+  font-family: "DM Sans";
+  text-decoration: underline;
+}
+
+.para3 {
+  font-family: "Fasthand";
+  position: absolute;
+  top: 35vh;
+  right: -200px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.para3 p {
+  font-size: 1.75rem;
+}
+
+.para3 img {
+  width: 14%;
+  position: absolute;
+  left: -43px;
+  bottom: 30px;
+}
+
+.para3 div {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.left2 {
+  left: 20px;
+  bottom: 30%;
+  position: absolute;
+  font-size: 1.5rem;
+  z-index: -1;
+  font-family: "DM Sans";
+}
+
+.left2 img {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.left2 p {
+  margin-left: 2%;
+}
+
+.lg-hidden {
+  display: none;
+}
+
+.yog-exp  {
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+
+.large-screen {
+  display: block;
+}
+.small-screen {
+  display: none;
+}
+
+
+@media (max-width: 1024px) and (min-height: 1024px) {
+  html {
+    font-size: 14px;
+  }
+ .arrow-right{
+  display: none;
+ }
+  .para2 {
+    right: -70px;
+  }
+  .para3 {
+    right: -70px;
+  }
+  .para1 {
+    left: -70px;
+  }
+  .right-curve {
+    right: -120px;
+  }
+  .left-curve {
+    left: -140px;
+  }
+}
+@media (max-width: 1024px) and (max-height: 800px) {
+  html {
+    font-size: 14px;
+  }
+ 
+  .para2 {
+    right: -400px;
+  }
+  
+}
+/* Media query for max-width 800px */
+@media (max-width: 800px) {
+  html {
+    font-size: 12px;
+  }
+  /* Your CSS rules for screens 800px and smaller */
+  .yoga-container {
+    height: 70vh;
+  }
+  /* .arrow-left,
+  .arrow-right {
+    display: none;
+  } */
+  .para2 {
+    top: -4rem;
+    right: -25%;
+  }
+  .para3 {
+    top: 25vh;
+    right: -70px;
+  }
+  .para1 {
+    left: -25%;
+  }
+
+}
+
+/* Media query for max-width 600px */
+@media (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+  .large-screen {
+    display: none;
+  }
+  .small-screen {
+    display: block;
+  }
+  .yoga-container {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .para2 {
+    top: -8rem;
+    right: -120px;
+  }
+  .para3 {
+    top: 25vh;
+    right: -150px;
+  }
+  .para1 {
+    left: -40%;
+  }
+  .curve-text {
+    height: 150px;
+  }
+  .tagline span{
+    font-size: 2rem;
+  }
+}
+
+/* Media query for max-width 400px */
+@media (max-width: 500px) {
+  .right-cloud{
+    right: 50%;
+  }
+  .tagline2{
+    margin-right: 2rem;
+  }
+  .lg-hidden {
+    display: block;
+  }
+  .para2,
+  .para1,
+  .para3 {
+    position: unset;
+  }
+  .para2 img{
+    transform: rotate(-40deg);
+  }
+  .lg-show {
+    display: block;
+  }
+  .sm-hidden {
+    display: none;
+  }
+  .yoga-header {
+    position: unset;
+    padding: 0;
+  }
+  .yoga-section {
+    height: auto;
+  }
+  /* Your CSS rules for screens 400px and smaller */
+  .yoga-container {
+    height: 60vh;
+  }
+  .ellipse {
+    height: 35vh;
+    left: 0%;
+    transform: translate(-25%, -50%);
+  }
+  .cloud {
+    height: 20vh;
+  }
+  .curve-text {
+    height: 130px;
+  }
+  .right-curve {
+    right: -70px;
+  }
+  .left-curve {
+    left: -90px;
+  }
+  .left-cloud{
+    left: 48%;
+  }
+
+  .left2 {
+    bottom: 25%;
+    position: absolute;
+    font-size: 15px;
+    z-index: -1;
+    font-family: "DM Sans";
+  }
+}

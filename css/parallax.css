@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fasthand&family=Felipa&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap");
+@import url("./media-query.css");
+@import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/font/helvetica-neue/HelveticaNeueBlack.woff") format("woff");
+  font-weight: 900;
+  /* Black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/font/helvetica-neue/HelveticaNeueMedium.woff") format("woff");
+  font-weight: 500;
+  /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/font/helvetica-neue/HelveticaNeueLight.woff") format("woff");
+  font-weight: 300;
+  /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/font/helvetica-neue/HelveticaNeueThin.woff") format("woff");
+  font-weight: 100;
+  /* Thin */
+  font-style: normal;
+}
+
+.gotu-regular {
+  font-family: "Gotu", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  position: relative;
+}
+
+hr {
+  color: black;
+  background-color: black;
+  border: 1px solid black;
+}
+
+#scroll-capture-section {
+  height: 500vh;
+  width: 100vw;
+  /* overflow: hidden; */
+  position: relative;
+  background-color: rgb(252, 252, 252);
+  transition: background 0.5s ease-out;
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-end; */
+}
+
+/* .parallax {
+  width: 100vw;
+  background: linear-gradient(to bottom, #69A8DB, #FFC986);
+} */
+/* background: linear-gradient(to bottom, #91c9f7, #f9c39b); */
+
+.parallax-head {
+  font-size: 12rem;
+  font-family: "Gotu", serif;
+  margin-top: 30vh;
+  z-index: 1000;
+  position: relative;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease-out;
+}
+
+.parallax-para {
+  font-family: "HelveticaNeue", serif;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  margin: 0rem 5rem;
+  font-weight: 300;
+  /* Light */
+  z-index: 1000;
+  position: relative;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease-out;
+  margin-bottom: 3rem;
+}
+
+.parallax-box {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  transition: all 1s ease-out;
+}
+
+.circle-1 {
+  width: 20vw;
+  height: 20vw;
+  top: -20vw;
+  /* Move half of its height up */
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, #ffb55d, #fff4be);
+  z-index: 600;
+}
+
+.circle-2 {
+  width: 40vw;
+  height: 35vw;
+  top: -35vw;
+  /* Move half of its height up */
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, #feac30, #feefac);
+  z-index: 400;
+}
+
+.circle-3 {
+  width: 60vw;
+  height: 50vw;
+  top: -50vw;
+  /* Move half of its height up */
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, #ffb55d, #fff4be);
+  z-index: 200;
+}
+
+.circle-4 {
+  width: 80vw;
+  height: 65vw;
+  top: -65vw;
+  /* Move half of its height up */
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, #ffffff, #ffed86);
+  z-index: 100;
+}
+
+.circle-5 {
+  width: 100vw;
+  height: 80vw;
+  top: -80vw;
+  /* Move half of its height up */
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, #ffffff, #ffefa6);
+  z-index: 10;
+}
+
+.active-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.active-circle-1 {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.active-circle-2 {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.active-circle-3 {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.active-circle-4 {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.active-circle-5 {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media screen and (max-width: 1024px) {
+  .parallax-box{
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .parallax-head {
+
+    margin-top: 0;
+    top: 0px;
+  }
+
+  .parallax-para {
+
+    margin: 0rem 5rem;
+    margin-bottom: 3rem;
+   
+  }
+
+}
+
+@media screen and (max-width: 1300px) and (min-height:750px) {
+  #scroll-capture-section {
+    height: 300vh;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-height:600px) {
+  #scroll-capture-section {
+    height: 300vh;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-height:1400px) {
+  #scroll-capture-section {
+    height: 250vh; 
+  }
+  .parallax-head {
+    margin-top: 0;
+    top: -30vh;
+  }
+
+  .parallax-para {
+    margin: 0rem 5rem;
+    margin-bottom: 3rem;
+    top: -31vh;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-height:1100px) {
+  #scroll-capture-section {
+    height: 250vh;
+    
+  }
+
+  .parallax-head {
+
+    margin-top: 0;
+    top: -30vh;
+  }
+
+  .parallax-para {
+    margin: 0rem 5rem;
+    margin-bottom: 3rem;
+    top: -31vh;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  #scroll-capture-section {
+    height: 200vh;
+  }
+
+  .parallax-head {
+    font-size: 5rem;
+    margin-top: 0;
+    
+  }
+
+  .parallax-para {
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    margin: 0rem 5rem;
+    margin-bottom: 3rem;
+    
+  }
+
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    transition: all 0.8s ease-out;
+  }
+
+  .circle-1 {
+    width: 44vw;
+    height: 44vw;
+    top: -44vw;
+    /* Move half of its height up */
+  }
+
+  .circle-2 {
+    width: 58vw;
+    height: 58vw;
+    top: 58vw;
+    /* Move half of its height up */
+  }
+
+  .circle-3 {
+    width: 72vw;
+    height: 72vw;
+    top: -72vw;
+    /* Move half of its height up */
+  }
+
+  .circle-4 {
+    width: 86vw;
+    height: 86vw;
+    top: -86vw;
+    /* Move half of its height up */
+  }
+
+  .circle-5 {
+    width: 100vw;
+    height: 100vw;
+    top: -100vw;
+    /* Move half of its height up */
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Semicircle Parallax Effect</title>
+	<style>
+		body,
+		html {
+			height: 100%;
+			margin: 0;
+
+		}
+
+		.semicircle {
+			position: fixed;
+			width: 60vw;
+			height: 60vw;
+			left: 50%;
+			transform: translateX(-50%) translateY(-100%);
+			background-color: blue;
+			border-radius: 50%;
+			z-index: 100;
+			transition: transform 0.3s ease-out;
+		}
+
+		.semicircle {
+			transition: top 0.3s ease-out;
+		}
+
+		.content {
+			position: relative;
+			z-index: 1;
+			padding: 10px;
+			background-color: white;
+			height: 200vh;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="semicircle" id="semicircle"></div>
+	<div class="content">
+		<!-- Content to create a scrolling effect -->
+		<p>Scroll down to see the effect...</p>
+
+	</div>
+	<script>
+		console.log("JavaScript file is loaded");
+		document.addEventListener("click", function () {
+			console.log("lemon");
+
+		})
+
+
+		window.addEventListener('scroll', function () {
+			requestAnimationFrame(function () {
+				updateSemicirclePosition(window.pageYOffset);
+			});
+		});
+
+		function updateSemicirclePosition(scrollPos) {
+			console.log(scrollPos);
+
+			var semicircle = document.getElementById('semicircle');
+
+			const element = document.querySelector("#semicircle");
+			const topPosition = window.getComputedStyle(element).top;
+			console.log(semicircle.style.top);
+			
+			console.log(topPosition);
+			let sub = topPosition + scrollPos;
+			console.log(sub);
+			
+			semicircle.style.top = sub + "px"
+
+			// semicircle.style.transform = `translateX(-50%) translateY(${newY}vh)`;
+		}
+
+
+
+
+
+
+	</script>
+</body>
+
+</html>

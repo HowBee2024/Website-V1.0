@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrolling Circle</title>
+
+<style>
+  body, html {
+  height: 200%; /* Making the page longer so you can scroll */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#circle {
+  position: fixed;
+  top: 1%; /* Start in the middle of the screen */
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+</head>
+<body>
+<div id="circle"></div>
+<script>
+  window.addEventListener('scroll', function() {
+  var circle = document.getElementById('circle');
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  // Calculate the new position of the circle
+  var newTop = 50 + scrollTop * 0.1; // Adjust movement speed if necessary
+  
+  // Convert percentage to pixels based on the window's height
+  var newTopInPx = window.innerHeight * (newTop / 100);
+  console.log(newTopInPx);
+  
+  // Constrain the circle within 144px and 288px
+  if (newTopInPx < 144) {
+    circle.style.top = '144px';
+  } else if (newTopInPx > 288) {
+    circle.style.top = '288px';
+  } else {
+    circle.style.top = newTop + 'px';
+  }
+});
+
+
+</script>
+</body>
+</html>

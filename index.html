@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Howbee</title>
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    body {
+      background-color: rgb(252, 252, 252);
+    }
+
+    /* For a specific element */
+    .Parallex {
+      overflow: auto;
+      /* To enable scrolling */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    .Parallex::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari, Opera */
+    }
+
+
+    .dancing-arrow {
+      width: 0;
+      display: none;
+      height: 40px;
+      border: 1px solid #333;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      animation: scroll 1.5s infinite;
+      -webkit-animation: scroll 1.5s infinite;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: -5px;
+        width: 1px;
+        height: 10px;
+        border-top: 10px solid #333;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+      }
+    }
+
+    @keyframes scroll {
+      0% {
+        height: 40px;
+      }
+
+      30% {
+        height: 70px;
+      }
+
+      60% {
+        height: 40px;
+      }
+    }
+
+    @-webkit-keyframes scroll {
+      0% {
+        height: 40px;
+      }
+
+      30% {
+        height: 70px;
+      }
+
+      60% {
+        height: 40px;
+      }
+    }
+  </style>
+  <script src="./js/Video.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fasthand&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="./css/media-query.css" />
+  <link rel="stylesheet" href="./css/scroll_bar.css" />
+  
+</head>
+
+<body>
+  <div id="video-container">
+    <video autoplay muted playsinline id="intro-video" src="./assets/videos/demo.mp4"></video>
+  </div>
+
+  <div class="parallax" id="scroll-capture-section">
+    <div class="dancing-arrow"></div>
+    <div class="parallax-box">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+      <div class="circle circle-4"></div>
+      <div class="circle circle-5"></div>
+      <h1 class="parallax-head">HowBee</h1>
+      <p class="parallax-para">
+        Transform your yoga journey with an AI-powered guide that supports,
+        inspires, and elevates your experience in real time!
+      </p>
+    </div>
+  </div>
+
+  <section id="partner">
+    <p class="logos-paragraph">Backed By</p>
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="./assets/partnerLogo/hdfc.png" alt="Image 1" />
+        <img src="./assets/partnerLogo/rubrix.png" alt="Image 2" />
+        <img src="./assets/partnerLogo/nsdc.png" alt="Image 3" />
+        <img src="./assets/partnerLogo/fist.png" alt="Image 4" />
+        <img src="./assets/partnerLogo/iit.png" alt="Image 5" />
+      </div>
+      <div class="logos-slide">
+        <img src="./assets/partnerLogo/hdfc.png" alt="Image 1" />
+        <img src="./assets/partnerLogo/rubrix.png" alt="Image 2" />
+        <img src="./assets/partnerLogo/nsdc.png" alt="Image 3" />
+        <img src="./assets/partnerLogo/fist.png" alt="Image 4" />
+        <img src="./assets/partnerLogo/iit.png" alt="Image 5" />
+      </div>
+      <div class="logos-slide">
+        <img src="./assets/partnerLogo/hdfc.png" alt="Image 1" />
+        <img src="./assets/partnerLogo/rubrix.png" alt="Image 2" />
+        <img src="./assets/partnerLogo/nsdc.png" alt="Image 3" />
+        <img src="./assets/partnerLogo/fist.png" alt="Image 4" />
+        <img src="./assets/partnerLogo/iit.png" alt="Image 5" />
+      </div>
+    </div>
+  </section>
+  <div class="arrow"></div>
+
+  <section id="yoga-Section-main" class="large-screen">
+    <section class="yoga-section">
+      <header class="yoga-header">
+        <div class="yoga-section__title" style="padding-bottom: 2rem;font-family: 'Gotu', serif;">
+          How
+          <div class="yoga-section__title_2">
+            <span class="highlighted-text" style="font-family: 'Gotu', serif;">Bee</span>
+            <p class="yoga-section__subtitle">Choose the hive</p>
+          </div>
+        </div>
+      </header>
+      <div class="para2 para-2-small lg-hidden">
+        <div style="display: flex; justify-content: center; margin: 1rem auto">
+          <p class="tagline">
+            See More . Be More . Learn More <span>with</span>
+            <span class="how" style="font-family: 'Gotu', serif;margin-right: 5px;">How</span> <span class="how"
+            style="font-family: 'Gotu', serif;">Bee </span>
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="para4 lg-hidden" style="margin: 2rem auto; font-family: Fasthand, cursive">
+          <p class="tagline" style="font-family: Fasthand, cursive">
+            Unnoticed <br />
+            Unattended
+          </p>
+        </div>
+      </div>
+      <div class="image-container">
+        <div class="yoga-container">
+          <img id="myyogaImage" src="./assets/yogaimg/yoga-boy.png" alt="Yoga Pose" class="yoga" />
+          <img style="z-index: -5" src="./assets/yogaimg/cloud1.png" alt="Cloud" class="cloud left-cloud" />
+          <img style="z-index: -5" src="./assets/yogaimg/cloud2.png" alt="Cloud" class="cloud right-cloud" />
+          <img src="./assets/yogaimg/Ellipse.png" class="ellipse" />
+
+          <div class="para1 sm-hidden" id="yoga-left-para1" style="flex-direction: column; align-items: end">
+            <p class="tagline" style="font-family: Fasthand, cursive">
+              Unnoticed . Unattended .
+            </p>
+            <img src="./assets/yogaimg/new_arrow.png" alt="Arrow" class="arrow arrow-left" />
+          </div>
+          <div class="para2 sm-hidden" id="yoga-right-para2">
+            <div>
+              <p class="tagline">
+                See More . Be More . Learn More<br />
+                <span>with</span>
+                <span class="how" style="font-family: 'Gotu', serif;margin-right: 5px;">How</span> <span class="how"
+                  style="font-family: 'Gotu', serif;">Bee </span>
+              </p>
+              <img src="./assets/yogaimg/new_arrow.png" alt="Arrow" class="arrow arrow-right" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="left2">
+        <p style="width: max-content" class="experience">Experience Yoga</p>
+        <hr style="
+              border: 1px solid #0000000a;
+              background-color: #00000026;
+              margin-top: 5px;
+              margin-bottom: 5px;
+            " />
+        <p style="width: max-content" class="healthy-lifestyle">
+          Like Never Before
+        </p>
+      </div>
+    </section>
+  </section>
+  <section id="yoga-Section-main" class="small-screen">
+    <section class="yoga-section">
+      <header class="yoga-header">
+        <div class="yoga-section__title" style="padding-bottom: 2rem">
+          How
+          <div class="yoga-section__title_2">
+            <span class="highlighted-text">Bee</span>
+            <p class="yoga-section__subtitle">Choose the hive</p>
+          </div>
+        </div>
+      </header>
+      <div class="yog-exp" style="width: fit-content;">
+        <p class="experience">Experience Yoga</p>
+        <hr style="
+        border: 1px solid #0000000a;
+        background-color: #00000026;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      " />
+        <p class="healthy-lifestyle">Like Never Before</p>
+      </div>
+      <div class="para2 para-2-small lg-hidden" style="text-align: center">
+        <div style="display: flex; justify-content: flex-end; margin: 1rem 1rem">
+          <p class="tagline">
+            See More . Be More . Learn More <br />
+            <span>with</span>
+            <span class="how" style="font-family: 'Gotu', serif;margin-right: 5px;">How</span> <span class="how"
+            style="font-family: 'Gotu', serif;">Bee </span>
+          </p>
+        </div>
+        <img style="width: 25px" src="./assets/yogaimg/phone-arrow-1.png" alt="" />
+      </div>
+
+      <div class="image-container">
+        <div class="yoga-container">
+          <img id="myyogaImage" src="./assets/yogaimg/yoga-boy.png" alt="Yoga Pose" class="yoga" />
+          <img style="z-index: -5" src="./assets/yogaimg/cloud1.png" alt="Cloud" class="cloud left-cloud"
+            id="left-cloud" />
+          <img style="z-index: -5" src="./assets/yogaimg/cloud2.png" alt="Cloud" class="cloud right-cloud"
+            id="right-cloud" />
+          <img src="./assets/yogaimg/Ellipse.png" class="ellipse" />
+
+          <div class="para1" style="position: absolute; z-index: 10; left: 40px; top: 10px">
+            <p class="tagline" style="font-family: Fasthand, cursive; font-size: 2rem">
+              Don’t follow <br />
+              blindly
+            </p>
+          </div>
+          <div class="para2 sm-hidden" id="yoga-para2">
+            <div>
+              <p class="tagline">
+                See More . Be More . Learn More <span>with</span>
+                <span class="how" style="font-family: 'Gotu', serif;margin-right: 5px;">How</span> <span class="how"
+                style="font-family: 'Gotu', serif;">Bee </span>
+              </p>
+              <img src="./assets/yogaimg/new_arrow.png" alt="Arrow" class="arrow arrow-right" />
+            </div>
+          </div>
+          <div class="para3" style="position: absolute; z-index: 10; right: 5px; top: 80px">
+            <div>
+              <p class="tagline2" class="t2" style="font-family: Fasthand, cursive; font-size: 2rem">
+                Unnoticed <br />
+                Unattended
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <div class="statsSection">
+    <div class="growth-section-phone">
+      <h1 style="text-align: center;"><span class="bee">Howbee</span> for new learnings</h1>
+
+
+
+
+    </div>
+    <div class="statsContainer">
+
+      <div class="columns">
+        <div class="column1">
+          <img src="./assets/statsImgs/column1.png" alt="Column1" class="column1img" />
+          <img src="./assets/statsImgs/hex1.png" alt="Hexagon1" class="hex1" />
+          <p>
+            More personal attention using computer vision with real-time
+            feedback
+          </p>
+        </div>
+
+        <div class="column2">
+          <img src="./assets/statsImgs/column2.png" alt="Column2" class="column2img" />
+          <img src="./assets/statsImgs/hex2.png" alt="Hexagon2" class="hex2" />
+
+
+          <p>Better understanding with 3D visuals</p>
+        </div>
+
+        <div class="column3">
+          <img src="./assets/statsImgs/column3.png" alt="Column3" class="column3img" />
+          <img src="./assets/statsImgs/hex3.png" alt="Hexagon3" class="hex3" />
+
+
+          <p>More efficient using smart instructor controls</p>
+        </div>
+        <div class="column4">
+          <img src="./assets/statsImgs/column4.png" alt="Column4" class="column4img" />
+        </div>
+      </div>
+
+      <div class="growth-section">
+        <h1 style="text-align: center;"><span class="bee">Howbee</span> for new learnings</h1>
+
+
+
+
+      </div>
+
+      <div class="bglines" style="z-index: -1;">
+        <img src="./assets/statsImgs/bglines.png" alt="bglines" />
+      </div>
+    </div>
+  </div>
+
+  <section id="video-frame" style="margin-bottom: -5vh;">
+    <video id="intro-video2" loop src="./assets/videos/Untitled design (4).mp4" autoplay playsinline loop muted></video>
+  </section>
+  <div class="auth-container" style="background-color: rgb(252,252,252);">
+    <!-- <div class="auth-text-container" style="text-align: center">
+      <div class="left-content">
+        <div class="auth_dive_into_the_hive">
+          <h1 id="auth-header" style="color: black; white-space: nowrap">
+            <span style="color: #ff9315; font-family: inherit">Bee</span>
+            Confident
+          </h1>
+        </div>
+      </div>
+      <div class="para">
+        <p id="auth-text">
+          Begin this wonderful <br />
+          journey with us!
+        </p>
+      </div>
+    </div> -->
+    <div class="auth-form-wrapper" style="max-width: 800px;">
+      <div class="auth-form-container">
+        <div class="auth-form-header">
+          <div class="auth-form-header-option" id="signup-tab">
+            Sign Up Now
+          </div>
+          <div class="auth-form-header-option" id="login-tab">Login</div>
+        </div>
+        <div class="auth-form-body" id="auth-form-body">
+          <form id="signup-form" action="#">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+              <i class="fas fa-eye fa-eye-slash" id="toggle-password"></i>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <small id="password-instruction">Use 8 digit password</small>
+            <label for="confirm-password">Confirm Password</label>
+            <div class="password-wrapper">
+              <i class="fas fa-eye fa-eye-slash" id="toggle-confirm-password"></i>
+              <input type="password" id="confirm-password" name="confirm-password" required />
+            </div>
+            <label for="invite-code">Invite Code</label>
+            <input type="text" id="invite-code" name="invite-code" required />
+            <label class="auth-form-checkbox-label" style="margin: 1rem 0rem">
+              <input type="checkbox" name="terms" required />
+              I agree to the terms and conditions
+            </label>
+            <div class="form-footer">
+              <button type="submit" class="auth-form-submit-btn">
+                Sign Up
+              </button>
+              <span class="auth-form-switch">
+                <p>Already have an account? <a href="#">Log In</a></p>
+              </span>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="object object1" style="--start:0vw; --mid:0vw; --end:0vw;"></div>
+    <div class="object object2" style="--start:0vw; --mid:0vw; --end:0vw;"></div>
+    <div class="object object3" style="--start:0vw; --mid:0vw; --end:0vw;"></div> -->
+    <!-- <img src="./assets/signup imgs/cloud1.png" class="cloud cloud1" />
+      <img src="./assets/signup imgs/cloud2.png " class="cloud cloud2" /> -->
+  </div>
+
+  <section id="info-section">
+    <div class="info-section__container">
+      <div class="info-section__header">
+        <div class="info-section__title">
+          <span style="font-family: 'Gotu', serif;">How</span>
+          <div class="info-section__title_2">
+            <span class="highlighted-text" style="font-family: 'Gotu', serif;">Bee</span>
+            <p class="info-section__subtitle">Bee come one of us</p>
+          </div>
+        </div>
+        <p class="info-section__cta-text">Discover Your Potential</p>
+      </div>
+
+      <hr class="info-section__divider" />
+
+      <div class="info-section__content">
+        <div class="info-section__quote-wrapper" style="padding-top: 2rem"></div>
+        <div class="info-section__tagline">
+          <h1 class="info-section__connect-text">Connect More with HowBee</h1>
+        </div>
+      </div>
+
+      <div class="info-section__main">
+        <div class="info-section__image-wrapper">
+          <div class="info-section__image">
+            <img src="./assets/Contact-us/bee.png" alt="bee" class="info-section__img" />
+          </div>
+        </div>
+        <div class="info-section__form-wrapper">
+          <div class="info-section__form-header">
+            Reach <span style="color: black">out for invite</span>
+          </div>
+          <form class="info-section__form">
+            <div class="info-section__form-field">
+              <input type="text" placeholder="NAME :" class="info-section__input" />
+            </div>
+            <div class="info-section__form-field">
+              <input type="number" placeholder="PHONE N0. :" class="info-section__input" />
+            </div>
+            <div class="info-section__form-field">
+              <input type="email" placeholder="EMAIL :" class="info-section__input" />
+            </div>
+            <div class="info-section__form-field">
+              <input type="text" placeholder="DESCRIPTION :" class="info-section__input" />
+            </div>
+            <div class="info-section__submit-button">
+              <button type="submit" class="btn">Submit</button>
+            </div>
+          </form>
+          <div class="info-section__social-icons">
+            <a href="/" class="info-section__social-icon"><i class="fa-regular fa-envelope"></i></a>
+            <a href="/" class="info-section__social-icon"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="/" class="info-section__social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="/" class="info-section__social-icon"><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-section__vertical_line"></div>
+  </section>
+
+  <script>
+    // Adjust height on window resize
+    window.addEventListener('scroll', function () {
+      const arrow = document.querySelector('.dancing-arrow');
+      if (window.scrollY > 10) { // Adjust the scroll threshold if needed
+        arrow.style.display = "none"
+      }
+    });
+
+    // Function to check if an element is in the viewport
+    // Function to check if an element is in the viewport
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      const windowHeight =
+        window.innerHeight || document.documentElement.clientHeight;
+
+      // Check if any part of the element is within the viewport
+      return (
+        rect.top <= windowHeight && // Top is below the viewport
+        rect.bottom >= 0 // Bottom is above the viewport
+      );
+    }
+
+    // Function to add the zoom-in class
+    function checkScroll() {
+      const statsSection = document.querySelector(".statsContainer");
+      const column1 = document.querySelector(".column1");
+      const column2 = document.querySelector(".column2");
+      const column3 = document.querySelector(".column3");
+
+      // Check if the statsSection is in the viewport
+      if (isElementInViewport(statsSection)) {
+        console.log("State section is here");
+        if (!column1.classList.contains("zoom-in")) {
+          column1.classList.add("zoom-in"); // Add the zoom-in class
+          column2.classList.add("zoom-in"); // Add the zoom-in class
+          column3.classList.add("zoom-in"); // Add the zoom-in class
+          window.removeEventListener("scroll", checkScroll); // Remove event listener after animation triggers
+        }
+      }
+    }
+
+    // Listen for scroll events
+    window.addEventListener("scroll", checkScroll);
+
+    // Initial check in case the section is already in view
+    document.addEventListener("DOMContentLoaded", checkScroll);
+  </script>
+
+  <script src="./js/new-parallax.js"></script>
+  <script src="./js/login.js"></script>
+  <!-- <script src="./js/parallax.js"></script> -->
+  <script src="./js/info.js"></script>
+  <script src="./js/yoga-anim.js"></script>
+</body>
+
+</html>
