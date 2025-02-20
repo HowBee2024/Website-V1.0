@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
         signupTab.style.background = 'yellow'
         loginTab.style.background = 'white'
+        contactTab.style.background = "white"
         document.getElementById('auth-switch-link').addEventListener('click', function (event) {
             event.preventDefault();
             showLoginForm();
@@ -54,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
         togglePasswordVisibility('password', 'toggle-password');
         togglePasswordVisibility('confirm-password', 'toggle-confirm-password');
     }
-
     function showLoginForm() {
         authFormBody.innerHTML = `
             <form id="login-form" action="#">
@@ -76,7 +76,8 @@ document.addEventListener('DOMContentLoaded', function () {
             </form>
         `;
         signupTab.style.background = 'white'
-        loginTab.style.background = 'yellow'
+        loginTab.style.background = 'yellow';
+        contactTab.style.background = "white"
         document.getElementById('auth-switch-link').addEventListener('click', function (event) {
             event.preventDefault();
 
