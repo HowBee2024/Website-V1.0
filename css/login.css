@@ -201,7 +201,7 @@
 }
 
 .auth-form-submit-btn {
-  width: 150px;
+  width: fit-content;
   padding: 1rem 1.5rem;
   border-radius: 50px;
   border: none;
@@ -354,6 +354,11 @@
 @media screen and (max-width: 800px) {
   html {
     font-size: 12px;
+  }
+  .auth-form-submit-btn {
+    
+    width: fit-content;
+    font-size: 10px;
   }
 }
 

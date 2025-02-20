@@ -300,7 +300,7 @@ hr {
   .circle-2 {
     width: 58vw;
     height: 58vw;
-    top: 58vw;
+    top: -58vw;
     /* Move half of its height up */
   }
 

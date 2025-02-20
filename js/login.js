@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <label for="contact-desc">Description</label>
                 <textarea id="contact-desc" name="desc" required></textarea>
                 <div class="form-footer">
-                    <button type="submit" style="width:200px" class="auth-form-submit-btn">Send Message</button>
+                    <button type="submit" style="width:fit-content" class="auth-form-submit-btn">Send Message</button>
                 </div>
             </form>
         `;
