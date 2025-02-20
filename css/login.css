@@ -80,7 +80,7 @@
   cursor: pointer;
 }
 
-.auth-form-header-option:nth-child(2) {
+.auth-form-header-option:nth-child(3) {
   border-radius: 0px 8px 0px 0px;
   cursor: pointer;
 }
@@ -132,7 +132,10 @@
 
 .auth-form-body input[type="text"],
 .auth-form-body input[type="email"],
-.auth-form-body input[type="password"] {
+.auth-form-body input[type="password"] ,
+.auth-form-body input[type="tel"],
+.auth-form-body textarea
+{
   padding: 10px;
   margin-bottom: 12px;
   border: 1px solid #ccc;

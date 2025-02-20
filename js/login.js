@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const signupTab = document.getElementById('signup-tab');
     const loginTab = document.getElementById('login-tab');
     const authFormBody = document.getElementById('auth-form-body');
+    const contactTab = document.getElementById('contact-tab');
+    // Update event listener for contact tab
+
 
     function showSignupForm() {
         authFormBody.innerHTML = `
@@ -85,6 +88,28 @@ document.addEventListener('DOMContentLoaded', function () {
             left off!`
         togglePasswordVisibility('password', 'toggle-password');
     }
+    function showContactForm() {
+        authFormBody.innerHTML = `
+            <form id="contact-form" action="#">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" name="name" required>
+                <label for="contact-phone">Phone No.</label>
+                <input type="tel" id="contact-phone" name="phone" required>
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" required>
+                <label for="contact-desc">Description</label>
+                <textarea id="contact-desc" name="desc" required></textarea>
+                <div class="form-footer">
+                    <button type="submit" style="width:200px" class="auth-form-submit-btn">Send Message</button>
+                </div>
+            </form>
+        `;
+        signupTab.style.background = 'white';
+        loginTab.style.background = 'white';
+        contactTab.style.background = 'yellow';
+        document.getElementById("auth-header").innerHTML = `<span style="color: #ff9315; font-family: inherit">Bee</span> Responsive`;
+        document.getElementById("auth-text").innerHTML = `We're here to help you!<br/>Reach out with any questions you have.`;
+    }
 
     function togglePasswordVisibility(inputId, toggleId) {
         const passwordInput = document.getElementById(inputId);
@@ -98,35 +123,35 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    
-        const clouds = document.querySelectorAll('.object');
-        const container = document.querySelector('.auth-container');
-        const maxWidth = container.clientWidth; // Max width of the container
-        const maxHeight = container.clientHeight; // Max height of the container
-      
-        function randomizeAnimation(cloud) {
-          const startX = Math.random() * maxWidth - maxWidth / 2;
-          const startY = Math.random() * maxHeight - maxHeight / 2;
-          const midX = Math.random() * maxWidth - maxWidth / 2;
-          const midY = Math.random() * maxHeight - maxHeight / 2;
-          const endX = startX; // End at the start point for continuity
-          const endY = startY; // End at the start point for continuity
-      
-          cloud.style.setProperty('--startX', `${startX}px`);
-          cloud.style.setProperty('--startY', `${startY}px`);
-          cloud.style.setProperty('--midX', `${midX}px`);
-          cloud.style.setProperty('--midY', `${midY}px`);
-          cloud.style.setProperty('--endX', `${endX}px`);
-          cloud.style.setProperty('--endY', `${endY}px`);
-        }
-      
-        setInterval(() => {
-          clouds.forEach(cloud => randomizeAnimation(cloud));
-        }, 10000); // Change animation every 10 seconds
-      
-      
+
+    const clouds = document.querySelectorAll('.object');
+    const container = document.querySelector('.auth-container');
+    const maxWidth = container.clientWidth; // Max width of the container
+    const maxHeight = container.clientHeight; // Max height of the container
+
+    function randomizeAnimation(cloud) {
+        const startX = Math.random() * maxWidth - maxWidth / 2;
+        const startY = Math.random() * maxHeight - maxHeight / 2;
+        const midX = Math.random() * maxWidth - maxWidth / 2;
+        const midY = Math.random() * maxHeight - maxHeight / 2;
+        const endX = startX; // End at the start point for continuity
+        const endY = startY; // End at the start point for continuity
+
+        cloud.style.setProperty('--startX', `${startX}px`);
+        cloud.style.setProperty('--startY', `${startY}px`);
+        cloud.style.setProperty('--midX', `${midX}px`);
+        cloud.style.setProperty('--midY', `${midY}px`);
+        cloud.style.setProperty('--endX', `${endX}px`);
+        cloud.style.setProperty('--endY', `${endY}px`);
+    }
+
+    setInterval(() => {
+        clouds.forEach(cloud => randomizeAnimation(cloud));
+    }, 10000); // Change animation every 10 seconds
 
 
+
+    contactTab.addEventListener('click', showContactForm);
     signupTab.addEventListener('click', showSignupForm);
     loginTab.addEventListener('click', showLoginForm);
 
