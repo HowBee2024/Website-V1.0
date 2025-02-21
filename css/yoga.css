@@ -71,11 +71,11 @@ header h1 span.highlight {
 
 .yoga-section__title {
   display: flex;
-  gap: 1rem;
+  /* gap: 1rem; */
   font-size: 5rem;
   color: black;
   font-weight: var(--font-weight-bold);
-  font-family: var(--font-dm-sans);
+  font-family: "Gotu", serif;
   padding: 0 1rem;
 }
 
@@ -90,10 +90,12 @@ header h1 span.highlight {
 
 .yoga-section__title_2 {
   position: relative;
+  font-family: "Gotu", serif;
 }
 
 .highlighted-text {
   color: var(--primary-yellow);
+  font-family: "Gotu", serif;
 }
 
 .yoga-container {
@@ -392,6 +394,10 @@ header h1 span.highlight {
   }
   .tagline span{
     font-size: 2rem;
+  }
+  .yog-exp  {
+    font-size: 1.5rem;
+    
   }
 }
 

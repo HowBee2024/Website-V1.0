@@ -291,30 +291,30 @@ hr {
   }
 
   .circle-1 {
+    width: 36vw;
+    height: 36vw;
+    top: -36vw;
+    /* Move half of its height up */
+  }
+
+  .circle-2 {
     width: 52vw;
     height: 52vw;
     top: -52vw;
     /* Move half of its height up */
   }
 
-  .circle-2 {
-    width: 64vw;
-    height: 64vw;
-    top: -64vw;
-    /* Move half of its height up */
-  }
-
   .circle-3 {
-    width: 76vw;
-    height: 76vw;
-    top: -76vw;
+    width: 68vw;
+    height: 68vw;
+    top: -68vw;
     /* Move half of its height up */
   }
 
   .circle-4 {
-    width: 88vw;
-    height: 88vw;
-    top: -88vw;
+    width: 84vw;
+    height: 84vw;
+    top: -84vw;
     /* Move half of its height up */
   }
 
