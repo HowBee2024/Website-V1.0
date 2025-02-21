@@ -272,7 +272,7 @@ hr {
 
   .parallax-head {
     font-size: 5rem;
-    margin-top: 0;
+    margin-top: 150px;
     
   }
 
@@ -291,30 +291,30 @@ hr {
   }
 
   .circle-1 {
-    width: 44vw;
-    height: 44vw;
-    top: -44vw;
+    width: 52vw;
+    height: 52vw;
+    top: -52vw;
     /* Move half of its height up */
   }
 
   .circle-2 {
-    width: 58vw;
-    height: 58vw;
-    top: -58vw;
+    width: 64vw;
+    height: 64vw;
+    top: -64vw;
     /* Move half of its height up */
   }
 
   .circle-3 {
-    width: 72vw;
-    height: 72vw;
-    top: -72vw;
+    width: 76vw;
+    height: 76vw;
+    top: -76vw;
     /* Move half of its height up */
   }
 
   .circle-4 {
-    width: 86vw;
-    height: 86vw;
-    top: -86vw;
+    width: 88vw;
+    height: 88vw;
+    top: -88vw;
     /* Move half of its height up */
   }
 
