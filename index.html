@@ -45,7 +45,6 @@
         transform: translate(-50%, -30px);
       }
     }
-
   </style>
   <script src="./js/Video.js"></script>
   <link
@@ -324,15 +323,28 @@
     <div class="auth-form-wrapper" style="max-width: 800px;">
       <div class="auth-form-container">
         <div class="auth-form-header">
-          <div class="auth-form-header-option" id="signup-tab">
+          <!-- <div class="auth-form-header-option" id="signup-tab">
             Sign Up Now
           </div>
-          <div class="auth-form-header-option" id="login-tab">Login</div>
+          <div class="auth-form-header-option" id="login-tab">Login</div> -->
           <div class="auth-form-header-option" id="contact-tab">Contact Us</div>
 
         </div>
         <div class="auth-form-body" id="auth-form-body">
-          <form id="signup-form" action="#">
+          <form id="contact-form" action="#">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" required>
+            <label for="contact-phone">Phone No.</label>
+            <input type="tel" id="contact-phone" name="phone" required>
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" required>
+            <label for="contact-desc">Description</label>
+            <textarea id="contact-desc" name="desc" required></textarea>
+            <div class="form-footer">
+              <button type="submit" style="width:fit-content" class="auth-form-submit-btn">Send Message</button>
+            </div>
+          </form>
+          <!-- <form id="signup-form" action="#">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required />
             <label for="email">Email</label>
@@ -363,7 +375,7 @@
               </span>
             </div>
 
-          </form>
+          </form> -->
         </div>
       </div>
     </div>
@@ -440,7 +452,8 @@
         <p>&copy; 2025 HowBee. All rights reserved.</p>
       </div>
       <div class="footer-right">
-        <a href="mailto:howbee2024@gmail.com" class="info-section__social-icon"><i class="fa-regular fa-envelope"></i></a>
+        <a href="mailto:howbee2024@gmail.com" class="info-section__social-icon"><i
+            class="fa-regular fa-envelope"></i></a>
         <!-- <a href="/" class="info-section__social-icon"><i class="fa-brands fa-linkedin"></i></a> -->
         <!-- <a href="/" class="info-section__social-icon"><i class="fa-brands fa-instagram"></i></a> -->
         <a href="tel:+918095133322" class="info-section__social-icon"><i class="fa-solid fa-phone"></i></a>
