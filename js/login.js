@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function showContactForm() {
         authFormBody.innerHTML = `
-            <form id="contact-form" action="#">
+            <form id="contact-form" "https://portalbackend-612363383073.asia-south1.run.app/contact" method="POST">
                 <label for="contact-name">Name</label>
                 <input type="text" id="contact-name" name="name" required>
                 <label for="contact-phone">Phone No.</label>
