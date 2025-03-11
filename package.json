@@ -7,9 +7,13 @@
   "main": "app.js",
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1" 
   },
   "author": "",
   "license": "ISC",
   "description": ""
 }
+
+
+
