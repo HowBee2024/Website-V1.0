@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Howbee</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+
   <link rel="stylesheet" href="./css/index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,6 +56,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="stylesheet" href="./css/media-query.css" />
   <link rel="stylesheet" href="./css/scroll_bar.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -324,16 +327,17 @@
     </div> -->
     <div class="auth-form-wrapper" style="max-width: 800px;">
       <div class="auth-form-container">
-        <div class="auth-form-header" >
+        <div class="auth-form-header">
           <!-- <div class="auth-form-header-option" id="signup-tab">
             Sign Up Now
           </div>
           <div class="auth-form-header-option" id="login-tab">Login</div> -->
-          <div class="auth-form-header-option" style="background-color: yellow;" id="contact-tab" >Contact Us</div>
+          <div class="auth-form-header-option" style="background-color: yellow;" id="contact-tab">Contact Us</div>
 
         </div>
         <div class="auth-form-body" id="auth-form-body">
-          <form id="contact-form" action="https://portalbackend-612363383073.asia-south1.run.app/api/v1/contact" method="POST">
+          <form id="contact-form" action="https://portalbackend-612363383073.asia-south1.run.app/api/v1/contact"
+            method="POST">
             <label for="contact-name">Name</label>
             <input type="text" id="contact-name" name="name" required>
             <label for="contact-phone">Phone No.</label>
@@ -511,6 +515,41 @@
 
     // Initial check in case the section is already in view
     document.addEventListener("DOMContentLoaded", checkScroll);
+  </script>
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", async function (event) {
+      event.preventDefault(); // Prevent default form submission
+
+      const form = event.target;
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          Swal.fire({
+            title: "Success!",
+            text: "Your message has been sent successfully.",
+            icon: "success",
+            confirmButtonText: "OK"
+          });
+
+          form.reset(); // Reset the form after successful submission
+        } else {
+          throw new Error("Failed to submit form");
+        }
+      } catch (error) {
+        Swal.fire({
+          title: "Error!",
+          text: "There was an issue submitting your message. Please try again.",
+          icon: "error",
+          confirmButtonText: "OK"
+        });
+      }
+    });
   </script>
 
   <script src="./js/new-parallax.js"></script>
